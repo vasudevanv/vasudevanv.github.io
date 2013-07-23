@@ -1,0 +1,22 @@
+# gitignore - Files ignored by git
+
+# ~/.gitignore_global contains all the file extensions
+# ignored in every git repository
+
+# Backups by emacs
+# ----------------
+
+*.*~
+*~
+\#*
+
+
+# Docs
+# ----
+
+*.ico
+*.png
+*.pdf
+*.jpg
+*.svg
+

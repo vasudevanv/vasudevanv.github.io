@@ -1,0 +1,42 @@
+      <hr>
+      <div class="footer .text-center">
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+
+    <script type='text/javascript'>
+      $(document).ready(function() {
+      $('#my-email').html(function(){
+      var e = "vasu.chemical";
+      var a = "@";
+      var d = "gmail";
+      var c = ".com";
+      var h = 'mailto:' + e + a + d + c;
+      $(this).parent('a').attr('href', h);
+      return e + a + d + c;
+      });
+      });
+    </script>
+
+    <script type='text/javascript'>
+      $(document).ready(function() {
+      $('#rpi-email').html(function(){
+      var e = "venkav2";
+      var a = "@";
+      var d = "rpi";
+      var c = ".edu";
+      var h = 'mailto:' + e + a + d + c;
+      $(this).parent('a').attr('href', h);
+      return e + a + d + c;
+      });
+      });
+    </script>
+
+  </body>
+</html>
