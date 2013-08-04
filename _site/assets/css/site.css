@@ -1,6 +1,6 @@
-/* site.css */
-/* Custom CSS codes some of which override the bootstrap code. */
+/* Custom CSS elements */
 
+/* Custom CSS codes some of which override the bootstrap code. */
 .nav-tabs > li, .nav-pills > li {
     float:none;
     display:inline-block;
@@ -11,3 +11,55 @@
 .nav-tabs, .nav-pills {
     text-align:center;
 }
+
+/* Custom CSS */
+.darkline{
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #333333;
+}
+
+.pagenation
+{
+ clear: both; display: block;
+ margin: 0; padding: 0;
+}
+
+.pagenation ul li
+{
+ list-style-type: none; margin: 0; padding: 0;
+ font-size: 1.5em;
+}
+
+.pagenation ul li a
+{
+ text-decoration: none
+ font-size: 1.5em;
+}
+
+.left
+{
+ float: left!important
+}
+
+.right
+{
+ float: right!important
+}
+
+.bibtex-button, .abstract-button {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #2A97F1;
+}
+
+pre.bibentry, div.abstract {
+     color: black;
+     border-left: 6px solid #cccccc;
+
+     background: #eeeeee;
+     margin: 10px 0px 20px 0px;
+     padding: 5px 5px 5px 20px;
+}
+

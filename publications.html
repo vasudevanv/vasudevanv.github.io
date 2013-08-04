@@ -1,0 +1,51 @@
+---
+title: Publications by year
+layout: default
+---
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<div style="margin-bottom:30px">
+{% for index in (1..1) %}
+  {% capture year %}{% cycle '2013' %}{% endcapture %}
+  <h3>{{year}}</h3>
+  <ol>
+    {% for post in site.categories.papers %}
+      {% comment %} make post.year into a string by assigning it to another variable {% endcomment %}
+      {% capture post_year %}{{post.year}}{% endcapture %}
+      {% if post_year == year %}
+        <li style="margin-bottom:10px">
+          <span style="font-weight: bold; color: #333333;">{{ post.title }}</span><br/>
+          <span style="color: #666666;">{{ post.authors }}, <i>{{ post.journal }}</i>,</span>
+	  {% if post.pages %}<span style="color: #666666;">{{post.volume}}</span>{% endif %}
+	  {% if post.pages %}<span style="color: #666666;">{{post.pages}}</span>{% endif %}
+	  <span style="color: #666666;">{{ post.year }}</span><br/>
+	  {% if post.abstract %}<span class="button abstract-button">[Abstract]</span>{% endif %}
+	  <span class="button bibtex-button">[BibTeX]</span> 
+	  {% if post.download %}<a href="{{post.download}}" class=".pdf-link">[PDF]</a>{% endif %}
+	  <div class="abstract">{{post.abstract}}</div>
+	  <pre class="bibentry">{{post.bibtex}}</pre>
+	</li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+{% endfor %}
+</div>
+
+<div class="row-fluid">
+  <div class="span12" style="text-align:center; font-size: 16px;">
+    <p> For more details check out my <a href="http://scholar.google.com/citations?user=zdFBoLoAAAAJ&hl=en">Google Scholar Profile</a></p>
+    </div
+</div>
+
+
+<script>
+  $(".bibentry").toggle(false)
+  $(".abstract").toggle(false)
+
+  $(".bibtex-button").click(function () {
+    $(this).siblings(".bibentry").toggle();
+  });
+  $(".abstract-button").click(function () {
+    $(this).siblings(".abstract").toggle();
+  });
+</script>
