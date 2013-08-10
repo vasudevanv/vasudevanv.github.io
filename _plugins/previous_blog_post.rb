@@ -60,8 +60,8 @@ module Jekyll
 
 
     alias orig_to_liquid to_liquid
-    def to_liquid
-      further_data = Hash[NEW_ATTRIBUTES_FOR_LIQUID.map { |attribute|
+    def to_liquid(attrs = NEW_ATTRIBUTES_FOR_LIQUID)
+      further_data = Hash[attrs.map { |attribute|
                             [attribute, send(attribute)]
                           }]
       data.deep_merge(further_data)
