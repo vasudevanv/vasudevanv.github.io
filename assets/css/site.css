@@ -20,24 +20,6 @@
   border-bottom: 1px solid #333333;
 }
 
-.pagenation
-{
- clear: both; display: block;
- margin: 0; padding: 0;
-}
-
-.pagenation ul li
-{
- list-style-type: none; margin: 0; padding: 0;
- font-size: 1.5em;
-}
-
-.pagenation ul li a
-{
- text-decoration: none
- font-size: 1.5em;
-}
-
 .left
 {
  float: left!important
